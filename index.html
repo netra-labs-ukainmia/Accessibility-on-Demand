@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility on Demand</title>
+  <!-- React and ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <!-- Babel -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Tailwind -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="./styles/main.css" rel="stylesheet">
+</head>
+ <body>
+   <div id="root"></div>
+   <!-- Load utils first -->
+-  <script type="text/babel" data-type="module" data-presets="react" src="./utils/constants.js"></script>
+-  <script type="text/babel" data-type="module" data-presets="react" src="./utils/formatters.js"></script>
+-  <script type="text/babel" data-type="module" data-presets="react" src="./utils/validators.js"></script>
++  <script src="./utils/constants.js" type="text/babel" data-type="module" data-presets="react"></script>
++  <script src="./utils/formatters.js" type="text/babel" data-type="module" data-presets="react"></script>
++  <script src="./utils/validators.js" type="text/babel" data-type="module" data-presets="react"></script>
+   <!-- Then load components -->
+-  <script type="text/babel" data-type="module" data-presets="react" src="./components/UserMenu.js"></script>
+-  <script type="text/babel" data-type="module" data-presets="react" src="./components/Login.js"></script>
+-  <script type="text/babel" data-type="module" data-presets="react" src="./components/Header.js"></script>
+-  <script type="text/babel" data-type="module" data-presets="react" src="./components/DocumentList.js"></script>
++  <script src="./components/UserMenu.js" type="text/babel" data-type="module" data-presets="react"></script>
++  <script src="./components/Login.js" type="text/babel" data-type="module" data-presets="react"></script>
++  <script src="./components/Header.js" type="text/babel" data-type="module" data-presets="react"></script>
++  <script src="./components/DocumentList.js" type="text/babel" data-type="module" data-presets="react"></script>
+   <!-- Load App last -->
+-  <script type="text/babel" data-type="module" data-presets="react" src="./App.js"></script>
++  <script src="./App.js" type="text/babel" data-type="module" data-presets="react"></script>
+ </body>
+</html>
